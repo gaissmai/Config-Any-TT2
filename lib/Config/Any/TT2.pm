@@ -5,11 +5,25 @@ use warnings;
 
 use base 'Config::Any::Base';
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 =head1 NAME
 
 Config::Any::TT2 - Plugin for Config::TT2 files
+
+=head1 SYNOPSIS
+
+    use Config::Any;
+
+    my $cfg_file = 'config-file.tt2';
+    my $cfg_any = Config::Any->load_files(
+        {
+            files           => [$cfg_file],
+            flatten_to_hash => 1,
+            use_ext         => 1,
+        }
+    );
+    my $cfg_stash = $cfg_any->{$cfg_file};
 
 =head1 DESCRIPTION
 
