@@ -8,7 +8,7 @@ Build.bat
 .last_cover_stats
 Makefile.PL
 Makefile.old
-Config-Any-TT2-*tar*
+Config-Any-TT2-*
 MANIFEST.*bak
 MYMETA.yml
 nytprof.out

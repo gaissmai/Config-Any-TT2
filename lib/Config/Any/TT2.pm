@@ -9,21 +9,23 @@ our $VERSION = '0.12';
 
 =head1 NAME
 
-Config::Any::TT2 - Plugin for Config::TT2 files
+Config::Any::TT2 - Config::Any plugin for Config::TT2 files
 
 =head1 SYNOPSIS
 
     use Config::Any;
 
-    my $cfg_file = 'config-file.tt2';
-    my $cfg_any = Config::Any->load_files(
+    my $cfg_file = 'cfg.tt2';
+
+    my $configs = Config::Any->load_files(
         {
             files           => [$cfg_file],
             flatten_to_hash => 1,
             use_ext         => 1,
         }
     );
-    my $cfg_stash = $cfg_any->{$cfg_file};
+
+    my $cfg = $configs->{$cfg_file};
 
 =head1 DESCRIPTION
 
